@@ -48,11 +48,14 @@ class AdressBookMenu
     static void ShowContacts(IEnumerable<Contact> contacts)
     {
         Console.WriteLine(contacts.Count() + " KONTAKTER");
+
+        int count = 1;
         foreach (var contact in contacts)
         {
-            Console.WriteLine(contact.Id + ": " +
+            Console.WriteLine(count + ": " +
                               contact.FullName + " - " +
                               contact.PhoneNumber?.Value);
+            count++;
         }
     }
 }
